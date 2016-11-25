@@ -47,4 +47,44 @@ angular.module('starter.services', [])
       return null;
     }
   };
+})
+
+.factory('Lists', function() {
+  // Might use a resource here that returns a JSON array
+
+  // Some fake testing data
+  var lists = [{
+    id: 0,
+    name: 'Courant',
+    lastWord: 'Shadow'
+  }, {
+    id: 1,
+    name: 'Soutenu',
+    lastWord: 'Nonetheless',
+  }, {
+    id: 3,
+    name: 'Corporate',
+    lastWord: 'Challenge',
+  }, {
+    id: 4,
+    name: 'Fantasy',
+    lastWord: 'Elf',
+  }];
+
+  return {
+    all: function() {
+      return lists;
+    },
+    remove: function(list) {
+      lists.splice(lists.indexOf(list), 1);
+    },
+    get: function(listId) {
+      for (var i = 0; i < lists.length; i++) {
+        if (lists[i].id === parseInt(listId)) {
+          return lists[i];
+        }
+      }
+      return null;
+    }
+  };
 });
