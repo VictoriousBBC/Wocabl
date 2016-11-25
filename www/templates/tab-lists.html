@@ -1,0 +1,19 @@
+<ion-view view-title="Home">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="list in lists" type="item-text-wrap" href="#/tab/lists/{{list.id}}">
+        <h2>{{list.name}}</h2>
+        <p>{{list.lastWord}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(list)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+
+    <div class="bar bar-footer bar-light">
+  		<a align="right" class="button-right button-icon icon ion-plus-circled balanced" ng-click="like(product.id)"></a>
+	</div>
+  </ion-content>
+</ion-view>
