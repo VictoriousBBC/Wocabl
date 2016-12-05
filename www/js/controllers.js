@@ -22,14 +22,12 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('ListDetailCtrl', function($scope) {})
+.controller('ListDetailCtrl', function($scope, $stateParams, Lists) {
+ $scope.list = Lists.get($stateParams.listId);
+  console.log($scope.list);
+})
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
+  console.log($scope.chat);
 })
-
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
-});

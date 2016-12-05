@@ -1,1 +1,9 @@
-/* Empty. Add your own CSS if you like */
+.bar-footer{
+height:150px;
+text-align:right;
+}
+
+.icon_addWord {
+  font-size:60px;
+  padding:140px;
+}

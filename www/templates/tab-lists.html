@@ -2,6 +2,7 @@
   <ion-content>
     <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="list in lists" type="item-text-wrap" href="#/tab/lists/{{list.id}}">
+        
         <h2>{{list.name}}</h2>
         <p>{{list.lastWord}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
@@ -13,7 +14,10 @@
     </ion-list>
 
     <div class="bar bar-footer bar-light">
-  		<a align="right" class="button-right button-icon icon ion-plus-circled balanced" ng-click="like(product.id)"></a>
-	</div>
+  		  <div class="padding">
+          Add a word
+          <a class="icon_addWord ion-plus-circled balanced"></a>
+        </div>
+    </div>
   </ion-content>
 </ion-view>
